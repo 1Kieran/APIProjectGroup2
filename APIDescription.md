@@ -21,7 +21,19 @@ This API provides information about the location of polar bears in Manitoba. A r
 
 ### **Description of Resources**
 The bear_id refers to a single bear  
-The distance refers to the distance between the bear and the current location
+The distance refers to the distance between the bear and the current location  
+The lantitude refers to the lantitude  
+The longitude refers to the longitude  
+{
+      "results":
+      {
+       “bear_id”:"22241”
+       “distance”:"2300 KM”
+       "lantitude":"65.164577"
+       "longitude":"-99.264979"
+      },
+       "status":"OK"
+}
 
 ### **Sample Request and Response**
 
@@ -39,6 +51,8 @@ sample response:
       {
        “bear_id”:"22241”
        “distance”:"2300 KM”
+       "lantitude":"65.164577"
+       "longitude":"-99.264979"
       },
        "status":"OK"
 }
