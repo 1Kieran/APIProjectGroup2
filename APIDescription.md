@@ -41,4 +41,16 @@ sample response:
        “distance”:"2300 KM”
       },
        "status":"OK"
-    }
+}
+
+
+
+**Status Codes**
+
+The "status" field within the API response object contains the status of the request. The "status" field may contain the following values:
+
+- "OK": indicates that the call to the API was successful;
+- "INVALID_REQUEST": indicates that either lat or lng parameters are missing or invalid;
+- "INVALID_DATE": indicates that date parameter is missing or invalid;
+- "INVALID_ID": indicates that identification number parameter is missing or invalid;
+- "UNKNOWN_ERROR": indicates that the request could not be processed due to a server error. The request may succeed if you try again.
