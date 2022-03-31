@@ -7,3 +7,25 @@ This API provides information about the location of polar bears in Manitoba. A r
 ### **Description of Resources**
 
 ### **Sample Request and Response**
+
+Sample Request
+
+https://api.mb-polarbear.org/json?lat=36.7201600&lng=-4.4203400
+
+https://api.mb-polarbear.org/json?lat=36.7201600&lng=-4.4203400&date=today
+
+https://api.mb-polarbear.org/json?lat=36.7201600&lng=-4.4203400&date=2022-03-17
+
+https://api.mb-polarbear.org/json?lat=36.7201600&lng=-4.4203400&formatted=0
+
+
+sample response:
+
+{
+      "results":
+      {
+       “bear_id”:"22241”
+       “distance”:"2300 KM”
+      },
+       "status":"OK"
+    }
