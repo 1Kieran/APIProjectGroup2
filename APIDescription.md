@@ -29,11 +29,7 @@ Sample Request
 
 https://api.mb-polarbear.org/json?lat=36.7201600&lng=-4.4203400
 
-https://api.mb-polarbear.org/json?lat=36.7201600&lng=-4.4203400&date=today
-
 https://api.mb-polarbear.org/json?lat=36.7201600&lng=-4.4203400&date=2022-03-17
-
-https://api.mb-polarbear.org/json?lat=36.7201600&lng=-4.4203400&formatted=0
 
 
 sample response:
