@@ -5,13 +5,13 @@ This API provides information about the location of polar bears in Manitoba. A r
 
 ### **List of Endpoints (with parameter)**
 
- ## Parameters
+#### Parameters
 1. lat(float)Latitude in decimal degrees. 
 2. lng(float)Longitude in decimal degrees.
 3. id(sting): Polar Bear ID
 4. date(string):Date in YYYY-MM-DD format.
 
-## Endpoints
+#### Endpoints
 1. Show all polar bears in Manitoba.
  * https://manitoba.polarbear/api/showall
 2. Show the polar bear closest to my location.
