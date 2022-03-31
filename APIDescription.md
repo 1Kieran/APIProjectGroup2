@@ -20,6 +20,8 @@ This API provides information about the location of polar bears in Manitoba. A r
  * https://manitoba.polarbear/api/byid/id/date
 
 ### **Description of Resources**
+The bear_id refers to a single bear  
+The distance refers to the distance between the bear and the current location
 
 ### **Sample Request and Response**
 
