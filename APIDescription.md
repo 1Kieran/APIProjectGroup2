@@ -1,7 +1,7 @@
 # **Manitoba Polar Bear API**
 
 ## **API Description**
-This API provides information about the location of polar bears in Manitoba. A requester can find a bear by listing latitude and longitude coordinates. This will return the current location and ID of the bear that is nearest to the given location using the near me endpoint. A bears  location will also be given by the ID of the bear and the date requested using the by ID endpoint. By using the list all ID endpoint the user will be returned the IDs of all polar bears currently in manitoba.
+This API provides information about the location of polar bears in Manitoba. A requester can find information about a bear they are familiar with or discover new bears.
 
 ## **List of Endpoints (with parameter)**
 There are three endpoints in the polar bear API
@@ -21,10 +21,10 @@ Show the polar bear closest to my location.
 https://manitoba.polarbear/api/nearme/lat=x&lng=y
 ```
 #### **Parameters**
-1. lat(float) Latitude in decimal degrees with in the range of Manitoba. 
-2. lng(float)Longitude in decimal degrees with in the range of Manitoba.
+1. lat(float) Latitude in decimal degrees with in Manitoba. 
+2. lng(float)Longitude in decimal degrees with in Manitoba.
 ### **By ID**
- Show the whereabout of a particular bear by id and a date.
+ Show the whereabout of a particular bear
 ```
 https://manitoba.polarbear/api/byid/id=x&date=y
 ```
@@ -51,7 +51,7 @@ The longitude refers to the longitude
 ## **Sample Request and Response**
 Below are sample request for each of the endpoints
 
-### **Endpoint 1**
+### **Show All**
 Sample Request:
 ```
 https://manitoba.polarbear/api/showall
@@ -61,32 +61,33 @@ Sample Response:
 {
       "results":
       {
-
+       "22241": 
+       { 
+        "latitude":"58.059401"
+        "longitude":"-93.006627" 
+       }
+       "22242": 
+       {
+        "latitude":"65.164577"
+        "longitude":"-99.264979" 
+        59.872335, -95.933006 
+       }
+       "22243": 
+       {
+        "latitude":"58.059401"
+        "longitude":"-93.006627"
+        "latitude":"58.638282"
+        "longitude":"-94.995443"  
+       }
       },
        "status":"OK"
 }
 ```
-### **Endpoint 2**
-Sample Request:
-```
-https://manitoba.polarbear/api/byid/lat=36.7201600&lng=-4.4203400&date=2022-03-17
-```
 
-Sample Response:
-```
-{
-      "results":
-      {
-       "latitude":"65.164577"
-       "longitude":"-99.264979"
-      },
-       "status":"OK"
-}
-```
-### **Endpoint 3**
+### **Near Me**
 Sample Request:
 ```
-https://manitoba.polarbear/api/nearme/bear_id=22241
+https://manitoba.polarbear/api/nearme/lat=49.810256&lng=-97.132288
 ```
 Sample Response:
 ```
@@ -94,9 +95,26 @@ Sample Response:
       "results":
       {
        “bear_id”:"22241”
-       “distance”:"2300”
-       "latitude":"65.164577"
-       "longitude":"-99.264979"
+       “distance”:"1005”
+       "latitude":"58.059401"
+       "longitude":"-93.006627"
+      },
+       "status":"OK"
+}
+```
+### **By ID**
+Sample Request:
+```
+https://manitoba.polarbear/api/byid/bear_id=22241&date=2022-03-17
+```
+
+Sample Response:
+```
+{
+      "results":
+      {
+        "latitude":"58.059401"
+        "longitude":"-93.006627"
       },
        "status":"OK"
 }
